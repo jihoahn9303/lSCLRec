@@ -1,0 +1,26 @@
+learning_rate: 0.001      # learning rate for model
+dropout_rate: 0.1         # dropout rate for model
+lambda_for_cl: 0.1        # control loss for encoder model(range: 0 ~ 1, allow float type)
+substitution_rate: 0.3    # ratio for item substitution in batch
+masking_rate: 0.3         # ratio for item masking in batch
+cropping_rate: 0.3        # ratio for item cropping in batch
+batch_size: 256       
+sequence_len: 1           # if run_mode == 'diversity' you should use 1, else using 30 will be good 
+embedding_dim: 128        # embedding size
+early_stop_patience: 20   # control early stopping steps
+warmup_steps: 10000       # control warmup steps for learning rate scheduling
+epochs: 200              
+clip_norm: 5.0            # gradient clipping norm
+log_interval: 10          # interval for logging for loguru and wandb
+temperature: 0.1          # temperature for NT-Xent Loss
+
+try_num: '9'              # experiment number
+run_mode: 'test'          # running mode for main.py: ['train', 'test', 'diversity']
+data_type: 'RentTheRunway'  # 'RentTheRunway'
+train_type: 'NCF'         # Model which you want to train: ['CL', 'REC', 'ONLY_REC', 'NCF']
+aug_mode: 'substitute'    # Item augmentaion mode: ['substitute', 'crop', 'mask']
+rec_num_dense_layer: 2
+model_trainable: False    # True, False
+
+k: 20                     # top-K item
+sparsity: 0.5             # transaction count sparsity for checking diversity
