@@ -106,6 +106,12 @@ k: 20                     # top-K item
 sparsity: 0.5             # transaction count sparsity for checking diversity
 ```
 
+### Experiment log
+
+본 논문 실험 결과의 상세한 로그(파라미터 설정, 학습 또는 테스트 결과, 파라미터 시각화 등)는 아래 홈페이지에서 확인하실 수 있습니다.
+
+[ISCLRec Weight & Bias logging] (https://wandb.ai/jihoahn9303/KHU_graduate)
+
 ### Package
 
 본 프로젝트를 위한 패키지는 `requirements.txt` 파일을 통해 다운로드 하실 수 있습니다.
